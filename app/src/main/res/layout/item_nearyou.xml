@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/nearYouImageFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/burger" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/foodTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/intersemibold"
+        android:text="@string/combination_fried_rice"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toTopOf="@id/subTitles"
+        app:layout_constraintStart_toEndOf="@+id/nearYouImageFood"
+        app:layout_constraintTop_toTopOf="@+id/nearYouImageFood" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subTitles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/shrimp_ham_mix_vegetable"
+        android:textColor="@color/textViewColor"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/nearYouImageFood"
+        app:layout_constraintTop_toBottomOf="@+id/foodTitle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rateImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/nearYouImageFood"
+        app:layout_constraintStart_toStartOf="@id/subTitles"
+        app:srcCompat="@drawable/ic_star" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textDigitRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:fontFamily="@font/intersemibold"
+        android:text="@string/_4_5"
+        android:textColor="@color/appleColor"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/rateImage"
+        app:layout_constraintStart_toEndOf="@+id/rateImage"
+        app:layout_constraintTop_toTopOf="@id/rateImage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rateCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:fontFamily="@font/intermedium"
+        android:text="@string/_100"
+        android:textColor="@color/textViewColor"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/textDigitRate"
+        app:layout_constraintStart_toEndOf="@+id/textDigitRate"
+        app:layout_constraintTop_toTopOf="@id/textDigitRate" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/division"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/intermedium"
+        android:text="@string/space_division"
+        android:textColor="@color/textViewColor"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/rateCount"
+        app:layout_constraintStart_toEndOf="@+id/rateCount"
+        app:layout_constraintTop_toTopOf="@id/rateCount" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/locationImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/division"
+        app:layout_constraintStart_toStartOf="@id/division"
+        app:layout_constraintTop_toTopOf="@+id/division"
+        app:srcCompat="@drawable/ic_delivery_location" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textKilometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:fontFamily="@font/intersemibold"
+        android:text="@string/_1_2km"
+        android:textColor="@color/kilometerTextColo"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/locationImage"
+        app:layout_constraintStart_toEndOf="@id/locationImage"
+        app:layout_constraintTop_toTopOf="@+id/locationImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
