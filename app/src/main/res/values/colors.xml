@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="errorMessageColor">#FF624D</color>
+    <color name="forgotPassword">#3A72D6</color>
+    <color name="facebookColor">#3A72D6</color>
+    <color name="appleColor">#313337</color>
+    <color name="textViewColor">#A4A7AD</color>
+    <color name="btnSignIn">#FEA159</color>
+    <color name="facebookTextColor">#F9FAFB</color>
+    <color name="doNotAccount">#8F8F8F</color>
+    <color name="rememberMeColor">#A4A7AD</color>
+    <color name="spannableStringColor">#3A72D6</color>
+    <color name="passwordDotColor">#313337</color>
+    <color name="searchViewHintColor">#70747C</color>
+    <color name="searchViewBackgroundColor">#EFF0F3</color>
 </resources>

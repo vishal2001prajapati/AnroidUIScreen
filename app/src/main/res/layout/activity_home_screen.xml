@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homescreen.HomeScreenActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/deliveryLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/intersemibold"
+            android:text="@string/delivery_to"
+            android:textColor="@color/textViewColor"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toTopOf="@+id/locationName"
+            app:layout_constraintStart_toEndOf="@id/location"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/locationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrowdown_right"
+            android:fontFamily="@font/intersemibold"
+            android:text="@string/_92_hang_trong"
+            android:textColor="@color/passwordDotColor"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="@+id/deliveryLocation"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryLocation" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/locationName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/deliveryLocation"
+            app:srcCompat="@drawable/ic_location_frame" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/addToCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/locationName"
+            app:layout_constraintEnd_toStartOf="@+id/imgFilter"
+            app:layout_constraintTop_toTopOf="@+id/deliveryLocation"
+            app:srcCompat="@drawable/ic_add_to_card" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/locationName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/deliveryLocation"
+            app:srcCompat="@drawable/ic_filter" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@drawable/background_searchview"
+            android:elevation="@dimen/_10sdp"
+            android:paddingStart="-10dp"
+            app:iconifiedByDefault="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationName"
+            app:queryBackground="@color/searchViewBackgroundColor"
+            app:queryHint="Search food, restaurant,..."
+            app:searchHintIcon="@drawable/ic_search"
+            app:searchIcon="@drawable/ic_search" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/imageSwipeViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/searchItems"
+            app:layout_constraintStart_toStartOf="@+id/searchItems"
+            app:layout_constraintTop_toBottomOf="@id/searchItems" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
