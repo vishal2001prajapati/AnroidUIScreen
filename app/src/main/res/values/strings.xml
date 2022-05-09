@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">AnroidUIScreen</string>
+    <string name="deliveryEveryEveryWhere">Delivery\neverywhere</string>
+    <string name="fastFoodDelivery">Fast food\ndelivery</string>
+    <string name="foodSubString">We are always ready to deliver your \nitems quickly and professionally</string>
+    <string name="sign_in">Sign in</string>
+    <string name="welcome_to_yummy">Welcome to yummy!</string>
+    <string name="email_address">Email address</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="you_entered_it_wrong">You entered it wrong</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="do_not_have_an_account">Do not have an account?</string>
+    <string name="facebook">Facebook</string>
+    <string name="apple">Apple</string>
+    <string name="enter_email_address">Enter EmailAddress</string>
+    <string name="password_maximum_contain_8_character">Password maximum contain 8 character</string>
+    <string name="enter_proper_email_address">Enter Proper EmailAddress</string>
+    <string name="do_not_have_not_an_account_sign_up">Do not have an account? Sign up</string>
+    <string name="perfect_email">perfect Email</string>
 </resources>
