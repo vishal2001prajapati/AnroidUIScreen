@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_1sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemImageMenu"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="@id/menuText"
+        app:layout_constraintEnd_toEndOf="@id/menuText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_icon_voucher" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/menuText"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/itemImageMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/intermedium"
+        android:textColor="@color/black" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

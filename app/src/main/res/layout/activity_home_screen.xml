@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".homescreen.HomeScreenActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/deliveryLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/intersemibold"
+            android:text="@string/delivery_to"
+            android:textColor="@color/textViewColor"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toTopOf="@+id/locationName"
+            app:layout_constraintStart_toEndOf="@id/location"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/locationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrowdown_right"
+            android:fontFamily="@font/intersemibold"
+            android:text="@string/_92_hang_trong"
+            android:textColor="@color/passwordDotColor"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="@+id/deliveryLocation"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryLocation" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/locationName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/deliveryLocation"
+            app:srcCompat="@drawable/ic_location_frame" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/addToCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/locationName"
+            app:layout_constraintEnd_toStartOf="@+id/imgFilter"
+            app:layout_constraintTop_toTopOf="@+id/deliveryLocation"
+            app:srcCompat="@drawable/ic_add_to_card" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/locationName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/deliveryLocation"
+            app:srcCompat="@drawable/ic_filter" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@drawable/background_searchview"
+            android:elevation="@dimen/_10sdp"
+            android:paddingStart="-10dp"
+            app:iconifiedByDefault="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationName"
+            app:queryBackground="@color/searchViewBackgroundColor"
+            app:queryHint="Search food, restaurant,..."
+            app:searchHintIcon="@drawable/ic_search"
+            app:searchIcon="@drawable/ic_search" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/imageSwipeViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:foregroundGravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/searchItems"
+            app:layout_constraintStart_toStartOf="@+id/searchItems"
+            app:layout_constraintTop_toBottomOf="@id/searchItems" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menuRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_23sdp"
+            android:layout_marginEnd="@dimen/_28sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageSwipeViewPager" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuRecyclerView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/discount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/intersemibold"
+                    android:text="@string/top_discounts"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timerCountHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:background="@drawable/count_shape"
+                    android:fontFamily="@font/interregular"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/_01"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/discount"
+                    app:layout_constraintStart_toEndOf="@+id/discount"
+                    app:layout_constraintTop_toTopOf="@id/discount" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/colon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:fontFamily="@font/intermedium"
+                    android:text="@string/colon"
+                    android:textColor="@color/appleColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/timerCountHours"
+                    app:layout_constraintStart_toEndOf="@+id/timerCountHours"
+                    app:layout_constraintTop_toTopOf="@+id/timerCountHours" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timerCountMinutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:background="@drawable/count_shape"
+                    android:fontFamily="@font/interregular"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/_01"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/timerCountHours"
+                    app:layout_constraintStart_toEndOf="@+id/colon"
+                    app:layout_constraintTop_toTopOf="@id/timerCountHours" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timerCountSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:background="@drawable/count_shape"
+                    android:fontFamily="@font/interregular"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/_01"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/timerCountMinutes"
+                    app:layout_constraintStart_toEndOf="@+id/colonSecond"
+                    app:layout_constraintTop_toTopOf="@id/timerCountMinutes" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/colonSecond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:fontFamily="@font/intermedium"
+                    android:text="@string/colon"
+                    android:textColor="@color/appleColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/timerCountMinutes"
+                    app:layout_constraintStart_toEndOf="@+id/timerCountMinutes"
+                    app:layout_constraintTop_toTopOf="@+id/timerCountMinutes" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/subDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/intermedium"
+                    android:text="@string/_10_off_orders_from_50"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/discount"
+                    app:layout_constraintStart_toStartOf="@+id/discount"
+                    app:layout_constraintTop_toBottomOf="@+id/discount" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/moveRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/discount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/discount"
+                    app:srcCompat="@drawable/ic_arrow_right" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/discountRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/subDiscount"
+                    app:layout_constraintStart_toStartOf="@+id/subDiscount"
+                    app:layout_constraintTop_toBottomOf="@+id/subDiscount" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textVoucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/intersemibold"
+                    android:text="@string/top_voucher"
+                    android:textColor="@color/appleColor"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/discountCode"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/discountCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/intermedium"
+                    android:text="@string/we_have_50_discount_codes"
+                    android:textColor="@color/textDiscountCodeColor"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/textVoucher"
+                    app:layout_constraintTop_toBottomOf="@+id/textVoucher" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/moveToRightVoucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textVoucher"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/textVoucher"
+                    app:srcCompat="@drawable/ic_arrow_right" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/voucherRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/discountCode"
+                    app:layout_constraintStart_toStartOf="@id/discountCode"
+                    app:layout_constraintTop_toBottomOf="@+id/discountCode"
+                    app:spanCount="2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
