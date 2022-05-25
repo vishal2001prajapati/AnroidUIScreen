@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">AnroidUIScreen</string>
+    <string name="deliveryEveryEveryWhere">Delivery\neverywhere</string>
+    <string name="fastFoodDelivery">Fast food\ndelivery</string>
+    <string name="foodSubString">We are always ready to deliver your \nitems quickly and professionally</string>
 </resources>
