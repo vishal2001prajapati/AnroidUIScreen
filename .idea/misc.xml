@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/background_searchview.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/btn_apple.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/btn_signin.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/count_shape.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/custom_round_checkbox.xml" value="0.215" />
+        <entry key="app/src/main/res/drawable/edittext_cursor.xml" value="0.215" />
+        <entry key="app/src/main/res/drawable/ic_arrowdown_right.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_checkbox.xml" value="0.215" />
+        <entry key="app/src/main/res/drawable/ic_checkboxfill.xml" value="0.215" />
+        <entry key="app/src/main/res/drawable/ic_location.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_location_frame.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_roundbutton.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_star.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_start.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_unfilldot.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_vector.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_voucher.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/ic_voucher_fifteen.xml" value="0.2115" />
+        <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_on_board_screen.xml" value="0.309375" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.309375" />
+        <entry key="app/src/main/res/layout/example.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/layout/fragment_home_screen.xml" value="0.309375" />
+        <entry key="app/src/main/res/layout/item_discount_recyclerview.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item_imageswipe.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/layout/item_menu_recyclerview.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/layout/item_nearyou.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_viewpager.xml" value="0.309375" />
+        <entry key="app/src/main/res/layout/item_voucher.xml" value="0.30833333333333335" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
