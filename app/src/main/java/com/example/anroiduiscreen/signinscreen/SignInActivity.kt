@@ -75,7 +75,7 @@ class SignInActivity : AppCompatActivity() {
             put(getString(R.string.password), passwordInputText.text.toString())
         }
 
-        Thread(Runnable {
+        Thread {
             try {
                 requestApiCall(jsonObject, url, POST, TWOHUNDRED, object : ResponseCallback {
                     override fun onSuccess(output: String) {
@@ -98,7 +98,7 @@ class SignInActivity : AppCompatActivity() {
                 exception.printStackTrace()
                 progressBar.visibility = View.GONE
             }
-        }).start()
+        }.start()
     }
 
     private fun signInClick() {
